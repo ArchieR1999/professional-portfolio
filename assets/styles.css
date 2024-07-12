@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+}
+
+:root {
+    --main-bg-color: black;
+}
+
+body {
+    color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    padding: 20px 35px;
+    background-color: black;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-weight: bold; 
+    font-size: 45px;
+    margin: 0;
+    display: inline;
+}
+
+header a {
+    text-decoration: none;
+    color: orange;
+}
+
+header nav {
+    float: right;
+    margin: 7px 0;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+section {
+    padding: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hero {
+    background-image: url("./images/colorful-abstract-background-4k-wallpaper-uhdpaper.com-233@0@g.webp");
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+
+.hero-title {
+    color: violet;
+    padding: 20px;
+    background: none;
+    right: 190px;
+    bottom: 50px;
+    position: absolute;
+    font-size: 30px;
+    border-style: none;
+}
+
+.summary, .work, .contact {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 40px;
+}
+.work .work-image {
+    display: flex;
+    flex-wrap: wrap;
+    size: 100%;
+}
+.section-title {
+    font-size: 65px;
+    padding: 0 20px;
+    text-align: left;
+    width: 20%;
+    min-width: 200px;
+}
+
+.section-content {
+    padding: 0 20px;
+    text-align: justify;
+    width: 80%;
+    color: white;
+}
+
+.line {
+    position: absolute;
+    left: 20%;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: flex
+}
