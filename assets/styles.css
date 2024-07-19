@@ -2,41 +2,49 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--main-bg-color);
 }
 
 :root {
     --main-bg-color: black;
+    --secondary-bg-color: royalblue;
+    --tertiary-bg-color: #ffffff;
 }
 
 body {
-    color: royalblue;
+    color: var(--tertiary-bg-color);
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
     padding: 20px 35px;
-    background-color: black;
-    width: 100%;
-    box-sizing: border-box;
+    background-color: var(--main-bg-color)
 }
 
 header h1 {
     font-weight: bold; 
-    font-size: 45px;
-    margin: 0;
+    font-size: 50px;
+    text-align: left;
+    margin: -100px;
     display: inline;
+    background-color: var(--main-bg-color);
+    padding: 10px 15px 10px 100px;
+    
+}
+header h1:hover {
+    background-color: var(--secondary-bg-color);
+    margin: 0 30px;
 }
 
 header a {
-    text-decoration: none;
     color: orange;
+    text-decoration: none;
 }
 
 header nav {
@@ -53,20 +61,39 @@ header nav ul li {
 }
 
 header nav ul li a {
+    
     margin: 0 30px;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 30px;
+    border-bottom: solid 5px;
+    border-radius: 5px;
+}
+header nav ul li a:hover {
+    border-bottom: none;
+    background-color: var(--tertiary-bg-color)
 }
 
 section {
-    padding: 60px;
+    padding: 40px;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     align-items: flex-start;
     position: relative;
+    justify-content: justify;
 }
-
+.section-title {
+    font-size: 100px;
+    color: orange;
+    padding-bottom: 20px;
+    padding-right: 20%;
+    text-align: left;
+    margin: 0 auto 35px auto;
+    width: 30%;
+    border-right: 5px solid #ffffff;
+   
+   
+}
 .hero {
     background-image: url("./images/colorful-abstract-background-4k-wallpaper-uhdpaper.com-233@0@g.webp");
     height: 300px;
@@ -88,46 +115,50 @@ section {
     border-style: none;
 }
 
-.summary, .work, .contact {
-    width: 100%;
+.summary {
+    background-color: var(--main-bg-color);
+    text-align: end;
+    justify-content: center;
     display: flex;
-    align-items: flex-start;
-    position: relative;
-    margin-bottom: 40px;
 }
-.work .work-image {
+
+.about-text {
     display: flex;
-    flex-wrap: wrap;
-    size: 100%;
+    justify-content: flex-end;
+    background-color: var(--main-bg-color);
 }
-.section-title {
-    font-size: 65px;
-    padding: 0 20px;
-    text-align: left;
+
+.work { 
+    background-color: var(--main-bg-color);
+    text-align: end;
+    justify-content: center;
+    display: flex;
+}
+.work-pics {
     width: 20%;
-    min-width: 200px;
+    height: 20%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
-.section-content {
-    padding: 0 20px;
-    text-align: justify;
-    width: 80%;
-    color: white;
+.contact {
+    background-color: var(--main-bg-color);
+    text-align: end;
+    justify-content: center;
+    display: flex;
+}
+    
+
+}
+.subcontact {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--main-bg-color);
+    list-style: none;
 }
 
-.line {
-    position: absolute;
-    left: 20%;
-    top: 0;
-    bottom: 0;
-    width: 5px;
-    background-color: white;
-    transform: translateX(-50%);
-}
 
-/* Make images responsive */
-img {
-    max-width: 100%;
-    height: auto;
-    display: flex
-}
+
